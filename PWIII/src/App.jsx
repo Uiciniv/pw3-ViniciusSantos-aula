@@ -2,6 +2,8 @@ import './App.css'
 
 import CardBooks from './components/CardBooks'
 
+import capaLivro from './assets/livros/livros/cavernas_aco.jpg'
+
 function App() {
 
   return (
@@ -9,21 +11,7 @@ function App() {
       <CardBooks
         titulo = "As Cavernas de Aço"
         autor = "Isaac Asimov"
-      />
-
-      <CardBooks
-        titulo = "Dragon Ball"
-        autor = "Akira Toriyama"
-      />
-
-      <CardBooks
-        titulo = "One Piece"
-        autor = "Eiichiro Oda"
-      />
-
-<CardBooks
-        titulo = "Naruto"
-        autor = "Masashi Kishimoto"
+        imagem = {capaLivro}
       />
 
     </>

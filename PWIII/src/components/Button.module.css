@@ -1,0 +1,12 @@
+.buttonContainer{
+    width:100%;
+
+}
+
+Button{
+    width:100%;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    color: #FFF;
+    background: linear-gradient(180deg, rgba(47,0,78,1) 0%, rgba(105,0,255,1) 50%, rgba(55,0,255,1) 100%);
+}
