@@ -1,17 +1,40 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import CardBooks from './components/CardBooks'
+import './App.css'
 
 import NavBar from './components/layout/Navbar'
 
-import capaLivro from './assets/livros/livros/cavernas_aco.jpg'
+import Container from './components/layout/Container'
+
+import Home from './components/pages/Home'
+import ListBooks from './components/pages/ListBooks'
+import CreateBooks from './components/pages/CreateBooks'
+
+
+
+
+
 
 function App() {
 
   return (
     <>
+
+      <BrowserRouter>
       
-      <NavBar/>
+        <Container>
+
+          <Routes>
+            <Route path='/' element={<NavBar />}>
+              <Route path='/' element={<Home />}/>
+              <Route path='/listBooks' element={<ListBooks />}/>
+              <Route path='/createBooks' element={<CreateBooks />}/>
+            </Route>
+          </Routes>
+
+        </Container>
+      
+      </BrowserRouter>  
 
     </>
   )

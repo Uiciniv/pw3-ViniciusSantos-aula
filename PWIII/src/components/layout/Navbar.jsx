@@ -1,19 +1,35 @@
-import style from './NavBar.module.css'
+import { Outlet, Link } from "react-router-dom";
+import style from "./NavBar.module.css";
+import logo from "../../../public/book.png";
 
-const NavBar = () =>{
+const NavBar = () => {
+  return (
+    <>
+      <nav className={style.navbar}>
+        <ul className={style.list}>
+          <Link to="/">
+            <li>
+              <img src={logo} className={style.fotinha} />
+            </li>
+          </Link>
 
-    return(
-        <nav className= {style.navbar}>
+          <Link to="/">
+            <li className={style.item}>HOME</li>
+          </Link>
 
-            <ul className= {style.list}>
-                <li className={style.item}>HOME</li>
-                <li className={style.item}>CADASTRAR LIVROS</li>
-                <li className={style.item}>LISTAR LIVROS</li>
-            </ul>
+          <Link to="/createBooks">
+            <li className={style.item}>CADASTRAR LIVROS</li>
+          </Link>
 
-        </nav>
-    )
+          <Link to="/listBooks">
+            <li className={style.item}>LISTAR LIVROS</li>
+          </Link>
+        </ul>
+      </nav>
 
-} 
+      <Outlet />
+    </>
+  );
+};
 
-export default NavBar
+export default NavBar;

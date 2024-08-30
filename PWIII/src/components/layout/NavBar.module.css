@@ -8,13 +8,18 @@ padding: 1em;
 /*REGRAS DA LISTA DE LINKS */
 .list{
     display: flex;
+    flex-direction: row;
     list-style: none;
     align-items: center;
     justify-content: space-between;
 }
 /*REGRAS DOS LINKS*/
 .item{
-    justify-items: center;
     margin-right: 1em;
     color: #FFF;
+}
+/*REGRAS DA IMG LOGO*/
+.fotinha{
+    width: 35px;
+    margin-right:50px ;
 }
