@@ -1,4 +1,5 @@
 import React from "react";
+import  { useState, useEffect } from 'react'
 
 import style from './CreateBooks.module.css'
 import Input from '../forms/Input';
@@ -6,6 +7,20 @@ import Select from "../forms/Select";
 import Button from "../forms/Button";
 
 const CreateBooks = () =>{
+
+    /*RECUPERA OS DADOS DE CATEGORIA DA APIREST */
+    useState(()=>{
+        fetch('http://localhost:5000/inserirCategoria',{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Headers':'*',
+
+            }
+        })
+    });
+
     return(
         <section className={style.create_books_container}>
 
